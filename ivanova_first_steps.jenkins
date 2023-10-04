@@ -1,22 +1,10 @@
-properLies([disableConcurrentBuilds()])
-
 pipeline {
-    agent {
-        label 'master'
-      }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
-    }
+    agent any
+
     stages {
-        stage("First step") {
+        stage('Hello') {
             steps {
-                sh 'ping mail.ru/'
-            }
-        }
-        stage("Second step") {
-            steps {
-                sh 'ping https://mtkp.bmstu.ru/'
+                echo 'Hello World'
             }
         }
     }
