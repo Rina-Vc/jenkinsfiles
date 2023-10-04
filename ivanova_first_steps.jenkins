@@ -1,4 +1,4 @@
-properLies([disabelConcurrentBuilds()])
+properLies([disableConcurrentBuilds()])
 
 pipeline {
     agent {
